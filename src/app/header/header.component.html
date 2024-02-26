@@ -1,0 +1,70 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div
+    class="container-fluid d-flex justify-content-between align-items-center"
+    style="background-color:white"
+  >
+    <div>
+      <img
+        src="assets/images/logo-note.png"
+        alt="Logo"
+        width="120"
+        height="100"
+        class="d-inline-block align-top"
+        routerLink="/add"
+      />
+    </div>
+    <button
+      class="navbar-toggler btn btn-outline-primary"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNavAltMarkup"
+      aria-controls="navbarNavAltMarkup"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div
+      class="collapse navbar-collapse justify-content-center"
+      id="navbarNavAltMarkup"
+    >
+      <div class="navbar-nav">
+        <a
+          class="nav-link"
+          routerLinkActive="active"
+          aria-current="page"
+          routerLink="/add"
+          >Add note</a
+        >
+        <a
+          class="nav-link"
+          routerLinkActive="active"
+          aria-current="page"
+          routerLink="/all"
+          >All Note</a
+        >
+        <a
+          class="nav-link"
+          routerLinkActive="active"
+          aria-current="page"
+          routerLink="/about"
+          >About</a
+        >
+      </div>
+    </div>
+    <div
+      class="collapse navbar-collapse justify-content-end"
+      id="navbarNavAltMarkup"
+    >
+      <div class="navbar-nav">
+        <a
+          class="nav-link"
+          routerLinkActive="active"
+          aria-current="page"
+          (click)="logout()"
+          >logout</a
+        >
+      </div>
+    </div>
+  </div>
+</nav>

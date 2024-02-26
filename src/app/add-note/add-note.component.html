@@ -1,0 +1,32 @@
+<form *ngIf="noteForm" [formGroup]="noteForm">
+  <h1 class="mt-5 mb-4" style="color: #5ab0d1">Add New Note</h1>
+  <input
+    type="text"
+    class="form-control mb-3"
+    formControlName="title"
+    placeholder="Enter note title..."
+    required
+  />
+  <textarea
+    class="form-control mb-3"
+    formControlName="content"
+    placeholder="Enter your note here..."
+    required
+  ></textarea>
+  <input type="file" (change)="onFileSelected($event)" />
+  @if (noteForm.get('image')?.value) {
+  <img
+    [src]="noteForm.get('image')?.value"
+    alt="Selected Image"
+    style="width: 300px; height: 400px"
+  />
+  }
+
+  <button
+    [disabled]="!noteForm.valid"
+    class="btn btn-primary mb-3"
+    (click)="addNote()"
+  >
+    Add Note
+  </button>
+</form>

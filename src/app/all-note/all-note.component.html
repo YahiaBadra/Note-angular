@@ -1,0 +1,57 @@
+<div class="container">
+  <h1 class="mt-5 mb-3" style="color: #5ab0d1">My Notes</h1>
+  <!-- <ul class="list-group">
+    @if (notes.length>0) { @for (note of notes; track $index) {
+    <li class="list-group-item">
+      <h3 style="color: #5ab0d1">{{ notes[$index][1].title }}</h3>
+      @if (notes[$index][1].image) {
+      <img
+        [src]="notes[$index][1].image"
+        alt="Note Image"
+        style="max-width: 200px"
+      />
+      }
+
+      <p>{{ notes[$index][1].content }}</p>
+      <button class="btn btn-danger" (click)="delete(notes[$index][0])">
+        Delete
+      </button>
+      |
+      <button
+      [routerLink]="'/update'"
+        class="btn btn-info"
+        (click)="edit(notes[$index][0])"
+        
+      >
+        Edit
+      </button>  -->
+  <!-- </li>
+    } }@else {
+    <P>There is no notes now</P>
+    }
+  </ul> -->
+  <ul class="list-group">
+    @for (note of notes; track $index) {
+    <li class="list-group-item">
+      <div>
+        <h3>{{ note.title }}</h3>
+        <p>{{ note.content }}</p>
+        @if (note.image) {
+        <img
+          [src]="note.image"
+          alt="Note Image"
+          style="width: 250px; height: 300px"
+        />
+        }
+        <div class="mt-2">
+          <button class="btn btn-primary" (click)="editNote(note)">Edit</button>
+          |
+          <button class="btn btn-danger" (click)="deleteNote(note.id)">
+            Delete
+          </button>
+        </div>
+      </div>
+    </li>
+    }
+  </ul>
+</div>
