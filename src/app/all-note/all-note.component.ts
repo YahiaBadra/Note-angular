@@ -2,13 +2,15 @@ import { Component, Input, OnInit, inject } from '@angular/core';
 import { SharedService } from '../shared.service';
 import { Router, response } from 'express';
 import { Note } from '../add-note/note.module';
+import { HeaderComponent } from "../header/header.component";
+import { FooterComponent } from "../footer/footer.component";
 
 @Component({
-  selector: 'app-all-note',
-  standalone: true,
-  imports: [],
-  templateUrl: './all-note.component.html',
-  styleUrl: './all-note.component.css',
+    selector: 'app-all-note',
+    standalone: true,
+    templateUrl: './all-note.component.html',
+    styleUrl: './all-note.component.css',
+    imports: [HeaderComponent, FooterComponent]
 })
 export class AllNoteComponent implements OnInit {
   // notes: any;

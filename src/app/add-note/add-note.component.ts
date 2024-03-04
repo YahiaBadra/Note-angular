@@ -9,13 +9,15 @@ import {
 import { Note } from './note.module';
 import { SharedService } from '../shared.service';
 import { Router } from '@angular/router';
+import { HeaderComponent } from "../header/header.component";
+import { FooterComponent } from "../footer/footer.component";
 
 @Component({
-  selector: 'app-add-note',
-  standalone: true,
-  imports: [CommonModule, ReactiveFormsModule],
-  templateUrl: './add-note.component.html',
-  styleUrl: './add-note.component.css',
+    selector: 'app-add-note',
+    standalone: true,
+    templateUrl: './add-note.component.html',
+    styleUrl: './add-note.component.css',
+    imports: [CommonModule, ReactiveFormsModule, HeaderComponent, FooterComponent]
 })
 export class AddNoteComponent {
   noteForm?: FormGroup;

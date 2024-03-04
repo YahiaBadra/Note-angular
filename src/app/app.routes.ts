@@ -5,6 +5,7 @@ import { AboutComponent } from './about/about.component';
 import { AddNoteComponent } from './add-note/add-note.component';
 import { AuthComponent } from './auth/auth.component';
 import { UpdateComponent } from './update/update.component';
+import { NotDataFoundComponent } from './not-data-found/not-data-found.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
@@ -13,4 +14,6 @@ export const routes: Routes = [
   { path: 'add', component: AddNoteComponent },
   { path: 'about', component: AboutComponent },
   { path: 'update', component: UpdateComponent },
+  { path: '404', component: NotDataFoundComponent },
+  { path: '**', redirectTo: '/404' },
 ];
